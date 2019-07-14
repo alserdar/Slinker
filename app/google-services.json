@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "313918435177",
+    "firebase_url": "https://slinker-5375e.firebaseio.com",
+    "project_id": "slinker-5375e",
+    "storage_bucket": "slinker-5375e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313918435177:android:af2f0150832dc081",
+        "android_client_info": {
+          "package_name": "com.alserdar.slinker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313918435177-n9tli148a75369bkglpjdup9dskgfarc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alserdar.slinker",
+            "certificate_hash": "f1feb29f5fb12fc46f98e7a72712f9d94ef7f9f5"
+          }
+        },
+        {
+          "client_id": "313918435177-ri52cvjhbist46esbenm99t3ags8eabv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjd7LaRM2iaMTHI-CfnZRJaeGz-ZQOAxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313918435177-ri52cvjhbist46esbenm99t3ags8eabv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
