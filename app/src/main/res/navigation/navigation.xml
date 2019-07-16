@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation" app:startDestination="@id/chatByCountry">
+
+    <fragment android:id="@+id/chatByCountry" android:name="com.alserdar.slinker.chat_by_country.ChatByCountry"
+              android:label="ChatByCountry">
+        <action android:id="@+id/action_chatByCountry_to_IAmInChatByCounty" app:destination="@id/IAmInChatByCounty"/>
+    </fragment>
+    <fragment android:id="@+id/IAmInChatByCounty" android:name="com.alserdar.slinker.chat_by_country.IAmInChatByCounty"
+              android:label="fragment_iam_in_chat_by_county" tools:layout="@layout/fragment_iam_in_chat_by_county"/>
+    <fragment android:id="@+id/chatByIQ" android:name="com.alserdar.slinker.chat_by_iq.ChatByIQ"
+              android:label="fragment_chat_by_iq" tools:layout="@layout/fragment_chat_by_iq">
+        <action android:id="@+id/action_chatByIQ_to_IAmInChatByCounty2" app:destination="@id/IAmInChatByCounty2"/>
+    </fragment>
+    <fragment android:id="@+id/IAmInChatByCounty2" android:name="com.alserdar.slinker.chat_by_country.IAmInChatByCounty"
+              android:label="fragment_iam_in_chat_by_county" tools:layout="@layout/fragment_iam_in_chat_by_county"/>
+</navigation>

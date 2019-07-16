@@ -39,7 +39,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
         // Checking for first time launch - before calling setContentView()
         prefManager = PrefManager(this)
-        if (!prefManager!!.isFirstTimeLaunch) {
+        if (!prefManager.isFirstTimeLaunch) {
             launchHomeScreen()
             finish()
         }
@@ -74,7 +74,7 @@ class WelcomeActivity : AppCompatActivity() {
         changeStatusBarColor()
 
         myViewPagerAdapter = MyViewPagerAdapter()
-        viewPager.setAdapter(myViewPagerAdapter)
+        viewPager.adapter = myViewPagerAdapter
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener)
 
         btnSkip.setOnClickListener(View.OnClickListener { launchHomeScreen() })
@@ -85,7 +85,7 @@ class WelcomeActivity : AppCompatActivity() {
             val current = getItem(+1)
             if (current < layouts.size) {
                 // move to next screen
-                viewPager.setCurrentItem(current)
+                viewPager.currentItem = current
             } else {
                 launchHomeScreen()
             }
@@ -114,11 +114,11 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     private fun getItem(i: Int): Int {
-        return viewPager.getCurrentItem() + i
+        return viewPager.currentItem + i
     }
 
     private fun launchHomeScreen() {
-        prefManager!!.isFirstTimeLaunch = false
+        prefManager.isFirstTimeLaunch = false
         startActivity(Intent(this@WelcomeActivity, Launcher::class.java))
         finish()
     }
@@ -133,12 +133,12 @@ class WelcomeActivity : AppCompatActivity() {
                 // changing the next button text 'NEXT' / 'GOT IT'
                 if (position == layouts.size - 1) {
                     // last page. make button text to GOT IT
-                    btnNext.setText(getString(R.string.start))
-                    btnSkip.setVisibility(View.GONE)
+                    btnNext.text = getString(R.string.start)
+                    btnSkip.visibility = View.GONE
                 } else {
                     // still pages are left
-                    btnNext.setText(getString(R.string.next))
-                    btnSkip.setVisibility(View.VISIBLE)
+                    btnNext.text = getString(R.string.next)
+                    btnSkip.visibility = View.VISIBLE
                 }
             }
 
